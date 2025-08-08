@@ -1,0 +1,74 @@
+body {
+  background-color: #1e1e2f;
+  color: #ffffff;
+}
+
+.navbar {
+  background-color: #2c2c3c !important;
+}
+
+.navbar-brand, .dropdown-toggle {
+  color: #ffffff !important;
+}
+
+.page-title {
+  color: #FF0022;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.card {
+  background-color: #2c2c3c;
+  color: #ffffff;
+  border: none;
+}
+
+.test-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.test-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-accent {
+  background-color: #b90019 !important;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-accent:hover {
+  background-color: #bb011a;
+}
+
+.dropdown-menu {
+  background-color: #2c2c3c;
+  color: #fff;
+}
+
+.dropdown-item {
+  color: #ffffff;
+}
+
+.dropdown-item:hover {
+  background-color: #444;
+}
+
+hr.dropdown-divider {
+  border-color: #444;
+}
+
+.form-card {
+  background-color: #2c2c3c;
+  color: #ffffff;
+  border: none;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-check-input:checked {
+  background-color: #FF0022;
+  border-color: #FF0022;
+}

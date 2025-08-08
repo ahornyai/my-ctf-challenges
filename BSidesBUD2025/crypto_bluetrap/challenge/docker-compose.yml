@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  bluetrap_app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4141:4141"
+    environment:
+      FLAG: bsides{1nv4l1d_curv3s_4r3_4lw4y5_c00l}
+    networks:
+      - bluetrap
+
+networks:
+  bluetrap:

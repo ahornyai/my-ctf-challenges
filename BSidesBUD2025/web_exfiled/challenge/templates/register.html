@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>ExfilEd - Registration</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      .login-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          padding: 2em;
+          background-color: #00816c;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="login-box">
+      <div class="card p-4 col-lg-3">
+        <h2 class="card-title text-center"><span style="color: #FF0022;">ExfilEd</span> Registration</h2>
+        <p class="card-header text-bg-success rounded d-none" id="successMessage"></p>
+        <p class="card-header text-bg-danger rounded d-none" id="errorMessage"></p>
+        <form action="/api/register" method="post" class="card-body text-center">
+          <input name="username" type="text" class="form-control" placeholder="Username">
+          <input name="password" type="password" class="form-control mt-2" placeholder="Password">
+
+          <button class="form-control btn btn-primary mt-4 mb-3" type="submit">Register</button>
+          <a href="/login">or login now!</a>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
+    <script>
+      const url = new URL(window.location.href);
+      const params = new URLSearchParams(url.search);
+
+      const err = params.get('err');
+      const msg = params.get('msg');
+
+      const error_text = document.getElementById("#errorMessage")
+      const msg_text = document.getElementById("#successMessage")
+
+      if (err) {
+        errorMessage.innerText = err;
+        errorMessage.classList.remove("d-none");
+      }
+
+      if (msg) {
+        successMessage.innerText = msg;
+        successMessage.classList.remove("d-none");
+      }
+    </script>
+  </body>
+</html>

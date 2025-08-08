@@ -1,0 +1,4 @@
+Flask
+selenium
+flask-session
+argon2-cffi

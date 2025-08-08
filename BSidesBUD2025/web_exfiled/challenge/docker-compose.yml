@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  exfiled_app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      HOST: https://exfiled.ctf.bsidesbud.com
+      TEACHER_USERNAME: teacher
+      TEACHER_PASSWORD: AgdXfWTjihzytc25jpscoVC4lITy1LuW
+      FLAG: bsides{x5_l34ks_4r3_c00l}
+    networks:
+      - exfiled
+
+networks:
+  exfiled:
+    external: true
