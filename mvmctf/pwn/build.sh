@@ -1,0 +1,1 @@
+gcc main.c -no-pie -fno-stack-protector -static -Wno-implicit-function-declaration -o dev_null
