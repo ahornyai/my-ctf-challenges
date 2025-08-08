@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:5858:5858"
+    environment:
+      FLAG: BSIDES{SQL_1nj3ct10n_4s_U5u4l}
+    networks:
+      - bitlock
+
+networks:
+  bitlock:
